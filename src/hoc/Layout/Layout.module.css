@@ -1,0 +1,9 @@
+.Layout {
+  padding: 20px;
+  background-color: rgb(79, 79, 201);
+}
+
+.Layout main {
+  display: flex;
+  flex-direction: column;
+}

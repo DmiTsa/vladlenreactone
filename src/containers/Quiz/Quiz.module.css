@@ -1,0 +1,10 @@
+.Quiz {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Quiz h1 {
+  color: blanchedalmond;
+  text-transform: uppercase;
+}
