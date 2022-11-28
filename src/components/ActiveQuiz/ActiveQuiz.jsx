@@ -2,17 +2,18 @@ import styleClasses from './ActiveQuiz.module.css';
 import AnsversList from '../AnswersList/AnswersList';
 
 function ActiveQuiz(props) {
-  const { id, question, answers, rightIndex } = props.answers;
+  const { onAnswerClick, qestionsCount, currentQuestions } = props;
+  const { question, answers } = props.answers;
   return (
     <div className={styleClasses.ActiveQuiz}>
       <p>
-        <span>{`Вопрос № ${id}`} (из 12)</span>
+        <span>{`Вопрос № ${currentQuestions + 1} из ${qestionsCount}`}</span>
       </p>
       <p>
         <strong>{question}</strong>
       </p>
       <p>Варианты ответа:</p>
-      <AnsversList answers={answers} rightIndex={rightIndex} />
+      <AnsversList answers={answers} onAnswerClick={onAnswerClick} />
     </div>
   );
 }
