@@ -6,9 +6,3 @@
   font-size: large;
   color: white;
 }
-
-.ActiveQuizList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
