@@ -1,17 +1,13 @@
 import Answer from '../Answer/Answer';
 import styleClasses from './AnswersList.module.css';
 
-function AnswersList(props) {
+function AnswersList({ answers, rightIndex }) {
   return (
-    <p>
-      <ol className={styleClasses.ActiveQuizList}>
-        <Answer />
-        <Answer />
-        <Answer />
-        <Answer />
-        <Answer />
-      </ol>
-    </p>
+    <ul className={styleClasses.ActiveQuizList}>
+      {answers.map((answer, i) => {
+        return <Answer key={i} text={answer} num={i} />;
+      })}
+    </ul>
   );
 }
 export default AnswersList;

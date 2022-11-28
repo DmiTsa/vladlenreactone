@@ -1,3 +1,17 @@
 .Answer {
+  min-width: 400px;
   display: block;
+  margin: 5px 0px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Answer:hover {
+  background-color: bisque;
+  color: black;
+}
+.Answer:active {
+  background-color: rgb(227, 143, 39);
 }

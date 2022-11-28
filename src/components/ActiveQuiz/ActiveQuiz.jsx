@@ -2,18 +2,24 @@ import styleClasses from './ActiveQuiz.module.css';
 import AnsversList from '../AnswersList/AnswersList';
 
 function ActiveQuiz(props) {
+  const { id, question, answers, rightIndex } = props.answers;
   return (
     <div className={styleClasses.ActiveQuiz}>
       <p>
-        <span>Вопрос № 1 (из 12)</span>
+        <span>{`Вопрос № ${id}`} (из 12)</span>
       </p>
       <p>
-        <strong>Как дела?</strong>
+        <strong>{question}</strong>
       </p>
       <p>Варианты ответа:</p>
-      <AnsversList />
+      <AnsversList answers={answers} rightIndex={rightIndex} />
     </div>
   );
 }
 
 export default ActiveQuiz;
+
+// id: 'q1',
+// question: '2 + 2 ?',
+// answers: ['5', '4', '3', '88'],
+// rightIndex: 1,
